@@ -23,7 +23,21 @@ body {
 	background-color: $gray;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
+	margin-top:50px;
 }
+
+.sr-only {
+	position:absolute;
+	width:1px;
+	height:1px;
+	padding:0;
+	margin:-1px;
+	overflow:hidden;
+	clip: rect(0,0,0,0);
+	border:0;
+}
+
+
 
 /********************
 WORDPRESS BODY CLASSES
@@ -71,7 +85,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -110,6 +124,7 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
 	font-weight: 500;
+	font-family: $sans-serif;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -153,16 +168,47 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color: $black;
+	background-color: $white;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:9999;
+	width:100%;
+	height:50px;
 }
 
 	#logo {
-		margin: 0.75em 0;
+		margin: 0 auto;
+		height:50px;
+		width:50px;
+		display:block;
+
 
 		a {
-			color: $white;
+			color: $black;
 		}
 	}
+
+.icon-bar {
+	display:block;
+	width:22px;
+	height:2px;
+	border-radius:1px;
+	background-color:#888;
+	margin:3px;
+}
+
+.navbar-toggle {
+	position:absolute;
+	float:right;
+	padding:9px 10px;
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid $gray;
+	border-radius:4px;
+	top:8px;
+	right:8px;
+}
 
 /*********************
 NAVIGATION STYLES
@@ -175,18 +221,29 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+.collapse {
+	display:none;
+}
 
 .nav {
 	border-bottom: 0;
 	margin: 0;
+	text-align:center;
+	text-transform: uppercase;
+	background-color: $white;
+	// width:100%;
+	border-top:1px solid $gray;
+	box-shadow:inset 0 1px 0 rgba(255,255,255,.1);
 
 	li {
 
 		a {
 			display: block;
-			color: $white;
+			color: $pearl-blue;
 			text-decoration: none;
-			padding: 0.75em;
+			line-height:100px;
+			padding: 0 1em;
+			// padding: 0.75em;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -246,29 +303,55 @@ and more scalable.
 
 } /* end .nav */
 
+/*********************
+HERO SECTION STYLES
+*********************/
+
+.hero {
+	position:relative;
+
+	picture {
+		display:block;
+		text-align:center;
+	}
+	.hero-img {
+		margin:0 auto;
+	}
+	.hero-text {
+		width:401px;
+		height:130px;
+		position:absolute;
+		top:50%;
+		left:50%;
+		margin: -80px 0 0 -200px;
+
+		h2, img {
+			margin: 0;
+		}
+		h2 {
+			color: $white;
+		}
+	}
+}
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
-#content {
-	margin-top: 1.5em;
-}
-
 		.hentry {
-			background-color: $white;
-			border-radius: 3px;
+			// background-color: $white;
+			// border-radius: 3px;
 			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
+			// border: 1px solid $border-color;
 
 			header {
-				border-bottom: 1px solid $light-gray;
+				// border-bottom: 1px solid $light-gray;
 				padding: 1.5em;
 			}
 
 			footer {
 				padding: 1.5em;
-				border-top: 1px solid $light-gray;
+				// border-top: 1px solid $light-gray;
 
 				p {
 					margin: 0;
@@ -310,12 +393,18 @@ POSTS & CONTENT STYLES
 			time {}
 		}
 
+
 		/* entry content */
 		.entry-content {
-			padding: 1.5em 1.5em 0;
+			padding: 1.5em;
 
 			p {
 				margin: 0 0 1.5em;
+			}
+
+			.about-text {
+				max-width:450px;
+				margin:0 auto;
 			}
 
 
@@ -402,11 +491,6 @@ POSTS & CONTENT STYLES
 				margin-bottom: 1.5em;
 			}
 
-			img {
-				margin: 0 0 1.5em 0;
-				max-width: 100%;
-				height: auto;
-			}
 
 			/*
 			image alignment on a screen this size may be
@@ -486,6 +570,12 @@ POSTS & CONTENT STYLES
 	// the tag output
 	.tags {
 		margin: 0;
+	}
+
+	img {
+		margin: 0 0 1.5em 0;
+		max-width: 100%;
+		height: auto;
 	}
 
 /******************************************************************
@@ -862,8 +952,8 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
-	color: $light-gray;
+	background-color: $pearl-blue;
+	color: $white;
 }
 
 	/*

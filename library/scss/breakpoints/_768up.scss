@@ -17,7 +17,9 @@ come into play. Have fun!
 GENERAL STYLES
 *********************/
 
-body {}
+body {
+	margin-top:100px;
+}
 
 /*********************
 LAYOUT & GRID STYLES
@@ -31,9 +33,15 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	height:100px;
+}
 
-	#logo {}
+	#logo {
+		height:100px;
+		width:100px;
+		float:left;
+	}
 
 /*********************
 NAVIGATION STYLES
@@ -41,6 +49,9 @@ NAVIGATION STYLES
 
 .nav {
 	border: 0;
+	float:right;
+	height:100px;
+	
 	ul {
 		background:$black;
 		margin-top:0;
@@ -136,6 +147,14 @@ NAVIGATION STYLES
 	}  /* end current highlighters */
 
 } /* end .nav */
+
+.collapse {
+	display:block;
+}
+
+.navbar-toggle {
+	display:none;
+}
 
 /*********************
 SIDEBARS & ASIDES

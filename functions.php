@@ -73,8 +73,10 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size('xtralarge-thumb', 1600, 800, true );
+add_image_size('large-thumb', 1060, 650, true);
+add_image_size('medium-thumb', 800, 490);
+add_image_size('small-thumb', 400, 245);
 
 /*
 to add more sizes, simply copy a line from above
@@ -112,6 +114,8 @@ when you add media to your content blocks. If you add more image sizes,
 duplicate one of the lines in the array and name it according to your
 new image size.
 */
+
+require_once('library/responsive_featured_image.php');
 
 /************* THEME CUSTOMIZE *********************/
 

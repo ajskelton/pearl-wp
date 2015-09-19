@@ -110,11 +110,14 @@ function loadGravatars() {
 */
 jQuery(document).ready(function($) {
 
-  /*
-   * Let's fire off the gravatar function
-   * You can remove this if you don't need it
-  */
-  loadGravatars();
+  $(".navbar-toggle").click(function() {
+    $("#navbar").toggleClass( 'collapse' );
+  });
+
+  $(".slider").slick({
+    dots: true
+  });
+        
 
 
 }); /* end of as page load scripts */

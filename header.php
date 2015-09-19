@@ -51,11 +51,15 @@
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 					<a href="<?php echo home_url(); ?>" rel="nofollow"><img id="logo" src="<?php echo get_template_directory_uri();?>/library/images/PearlLogo.png" alt="Pearl Skelton"></a>
 
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 
 
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav role="navigation" class="navbar-collapse collapse" id="navbar" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
