@@ -19,9 +19,13 @@
 					
 				</section>
 
-				<section id="hero" class="entry-content wrap cf" itemprop="articleBody">
+				<section id="hero">
+					
+					<div class="entry-content wrap cf" itemprop="articleBody">
 
-					<p class="hero-text"><?php the_field('hero-text'); ?></p>
+						<p class="hero-text"><?php the_field('hero-text'); ?></p>
+
+					</div>
 					
 				</section>
 
@@ -100,6 +104,8 @@
 					<div class="entry-content wrap cf">
 						<h1>Contact</h1>
 						<?php echo do_shortcode( '[contact-form-7 id="29" title="Contact Pearl"]' ); ?>
+						<p class="m-all t-1of2 d-1of2 txt-right">info@pearlskelton.com</p>
+						<p class="m-all t-1of2 d-1of2 txt-left last-col">(916) 531-2538</p>
 					</div>
 				</section>
 

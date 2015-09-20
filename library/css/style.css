@@ -1288,13 +1288,13 @@ SCSS basic styles from a vendor or plugin
 
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url("./images/ajax-loader.gif") center center no-repeat; }
+  background: #fff url("../images/ajax-loader.gif") center center no-repeat; }
 
 /* Icons */
 @font-face {
   font-family: "slick";
-  src: url("./fonts/slick.eot");
-  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  src: url("../fonts/slick.eot");
+  src: url("../fonts/slick.eot?#iefix") format("embedded-opentype"), url("../fonts/slick.woff") format("woff"), url("../fonts/slick.ttf") format("truetype"), url("../fonts/slick.svg#slick") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -1504,12 +1504,12 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #f01d4f;
+  color: #56CAF4;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #d10e3c; }
+    color: #2bbcf1; }
   a:link, a:visited:link {
     /*
 		this highlights links on iPhones/iPads.
@@ -1653,6 +1653,8 @@ INTRO SECTION STYLES
   .intro picture {
     display: block;
     text-align: center; }
+    .intro picture image {
+      margin: 0; }
   .intro .intro-img {
     margin: 0 auto; }
   .intro .intro-text {
@@ -1670,6 +1672,12 @@ INTRO SECTION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.row {
+  margin-bottom: 1em; }
+
+p {
+  color: #56CAF4; }
+
 .hentry {
   margin-bottom: 1.5em; }
   .hentry header {
@@ -1702,8 +1710,21 @@ POSTS & CONTENT STYLES
 
 .blue {
   background-color: #56CAF4; }
-  .blue h1 {
+  .blue h1, .blue p {
     color: white; }
+
+.txt-right {
+  text-align: center; }
+
+.txt-left {
+  text-align: center; }
+
+.hero-img {
+  margin: 0; }
+
+#hero {
+  background: url("../images/light_grey.png") repeat;
+  margin-top: -6px; }
 
 /* entry content */
 .entry-content {
@@ -1990,6 +2011,31 @@ COMMENT FORM STYLES
   margin: 0 20px 1.1em; }
 
 /*********************
+CONTACT FORM 7
+*********************/
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea {
+  background-color: transparent;
+  color: #323944;
+  width: 100%;
+  border: 2px solid #56CAF4;
+  max-width: 600px;
+  margin: 0; }
+
+.wpcf7 input[type="submit"] {
+  background-color: #56CAF4;
+  color: #fff;
+  border: none;
+  padding: 5px 10px; }
+
+input::-webkit-input-placeholder,
+input:-moz-placeholder,
+input::-moz-placeholder,
+input:-ms-input-placeholder {
+  color: #56CAF4; }
+
+/*********************
 SIDEBARS & ASIDES
 *********************/
 .widget ul li {
@@ -2009,8 +2055,9 @@ FOOTER STYLES
 .footer {
   clear: both;
   background-color: #56CAF4;
-  color: #fff;
   text-align: center; }
+  .footer p {
+    color: #fff; }
 
 /*
 	if you checked out the link above:
@@ -2085,7 +2132,8 @@ POSTS & CONTENT STYLES
       width: 33.33%; }
       .entry-content .gallery li img {
         display: block;
-        margin: 0 auto; }
+        width: 100%;
+        margin: 0 auto 5px auto; }
     .entry-content .alignleft, .entry-content img.alignleft {
       margin-right: 1.5em;
       display: inline;
@@ -2175,8 +2223,8 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/ }
         .nav li a:hover, .nav li a:focus {
-          color: #fff;
-          text-decoration: underline; }
+          color: #2bbcf1;
+          text-decoration: none; }
       .nav li ul.sub-menu,
       .nav li ul.children {
         margin-top: 0;
@@ -2215,13 +2263,12 @@ NAVIGATION STYLES
     display: block; }
   .navbar-toggle {
     display: none; }
+  .entry-content .hero-text {
+    max-width: 80%; }
   .entry-content .gallery li {
     float: left;
-    width: 20%;
-    padding-right: 5px;
-    margin: 0; }
-    .entry-content .gallery li img {
-      margin: 0; }
+    width: 25%;
+    padding-right: 5px; }
   .entry-content .about-image-wrap {
     float: left;
     width: 500px;
@@ -2235,6 +2282,10 @@ NAVIGATION STYLES
   #about {
     overflow: hidden;
     height: 385px; }
+  .txt-right {
+    text-align: right; }
+  .txt-left {
+    text-align: left; }
   /*********************
 SIDEBARS & ASIDES
 *********************/
@@ -2263,6 +2314,11 @@ SIDEBARS & ASIDES
   /* recent-comments widget */
   /* search widget */
   /* text widget */
+  /*********************
+CONTACT FORM 7
+*********************/
+  textarea {
+    min-height: 169px; }
   /*********************
 FOOTER STYLES
 *********************/
@@ -2298,6 +2354,8 @@ be seen on the Desktop.
 ******************************************************************/
   .wrap {
     width: 1040px; }
+  .entry-content .gallery li {
+    width: 20%; }
   .entry-content .about-image-wrap {
     width: 600px;
     height: 600px;
@@ -2305,7 +2363,10 @@ be seen on the Desktop.
     shape-outside: ellipse(300px 300px at 40% 39%);
     margin-right: 20px; }
   .entry-content .about-image {
-    width: 600px; } }
+    width: 600px; }
+  #home-slider {
+    max-width: 1200px;
+    margin: 0 auto; } }
 
 /*********************
 LARGE VIEWING SIZE

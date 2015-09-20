@@ -315,6 +315,9 @@ INTRO SECTION STYLES
 	picture {
 		display:block;
 		text-align:center;
+		image {
+			margin:0;
+		}
 	}
 	.intro-img {
 		margin:0 auto;
@@ -339,6 +342,14 @@ INTRO SECTION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+
+		.row {
+			margin-bottom:1em;
+		}
+
+		p {
+			color: $pearl-blue;
+		}
 
 		.hentry {
 			// background-color: $white;
@@ -398,9 +409,24 @@ POSTS & CONTENT STYLES
 		.blue {
 			background-color: $pearl-blue;
 
-			h1{
+			h1, p{
 				color:white;
 			}
+		}
+
+		.txt-right {
+			text-align:center;
+		}
+		.txt-left {
+			text-align:center;
+		}
+		.hero-img {
+			margin:0;
+		}
+
+		#hero {
+			background: url('../images/light_grey.png') repeat;
+			margin-top:-6px;
 		}
 
 
@@ -416,6 +442,7 @@ POSTS & CONTENT STYLES
 				max-width:450px;
 				margin:0 auto;
 			}
+
 
 
 			ul, ol, table, dl {}
@@ -935,6 +962,31 @@ COMMENT FORM STYLES
 	.nocomments {
 		margin: 0 20px 1.1em;
 	}
+/*********************
+CONTACT FORM 7
+*********************/
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea {
+	background-color:transparent;
+	color:$black;
+	width:100%;
+	border: 2px solid $pearl-blue;
+	max-width:600px;
+	margin:0;
+}
+.wpcf7 input[type="submit"] {
+	background-color: $pearl-blue;
+	color:$white;
+	border:none;
+	padding: 5px 10px;
+}
+input::-webkit-input-placeholder,
+input:-moz-placeholder,
+input::-moz-placeholder,
+input:-ms-input-placeholder {
+	color:$pearl-blue;
+}
 
 /*********************
 SIDEBARS & ASIDES
@@ -981,8 +1033,11 @@ FOOTER STYLES
 .footer {
 	clear: both;
 	background-color: $pearl-blue;
-	color: $white;
 	text-align:center;
+
+	p {
+		color:$white;
+	}
 }
 
 	/*
