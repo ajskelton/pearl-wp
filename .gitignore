@@ -25,6 +25,7 @@ local.properties
 .buildpath
 nbproject/
 node_modules/
+flightplan.js
 
 ############
 ## OSes
