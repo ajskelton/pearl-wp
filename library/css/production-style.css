@@ -1263,7 +1263,8 @@ SCSS basic styles from a vendor or plugin
   [dir="rtl"] .slick-slide {
     float: right; }
   .slick-slide img {
-    display: block; }
+    display: block;
+    margin: 0; }
   .slick-slide.slick-loading img {
     display: none; }
   .slick-slide.dragging img {
@@ -1308,7 +1309,9 @@ SCSS basic styles from a vendor or plugin
   margin-top: -10px;
   padding: 0;
   border: none;
-  outline: none; }
+  outline: none;
+  background-color: #56CAF4;
+  border-radius: 25px; }
   .slick-prev:hover,
   .slick-prev:focus,
   .slick-next:hover, .slick-next:focus {
@@ -1333,19 +1336,20 @@ SCSS basic styles from a vendor or plugin
   -moz-osx-font-smoothing: grayscale; }
 
 .slick-prev {
-  left: -25px; }
+  left: 10px;
+  z-index: 20; }
   [dir="rtl"] .slick-prev {
     left: auto;
-    right: -25px; }
+    right: 10px; }
   .slick-prev:before {
     content: "←"; }
     [dir="rtl"] .slick-prev:before {
       content: "→"; }
 
 .slick-next {
-  right: -25px; }
+  right: 10px; }
   [dir="rtl"] .slick-next {
-    left: -25px;
+    left: 10px;
     right: auto; }
   .slick-next:before {
     content: "→"; }
@@ -1353,12 +1357,9 @@ SCSS basic styles from a vendor or plugin
       content: "←"; }
 
 /* Dots */
-.slick-slider {
-  margin-bottom: 30px; }
-
 .slick-dots {
   position: absolute;
-  bottom: -45px;
+  bottom: 0;
   list-style: none;
   display: block;
   text-align: center;
@@ -1519,6 +1520,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   font-weight: 500;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1529,7 +1531,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 h1, .h1 {
   font-size: 2.5em;
-  line-height: 1.333em; }
+  line-height: 1.333em;
+  color: #56CAF4; }
 
 h2, .h2 {
   font-size: 1.75em;
@@ -1638,25 +1641,25 @@ and more scalable.
 
 /* end .nav */
 /*********************
-HERO SECTION STYLES
+INTRO SECTION STYLES
 *********************/
-.hero {
+.intro {
   position: relative; }
-  .hero picture {
+  .intro picture {
     display: block;
     text-align: center; }
-  .hero .hero-img {
+  .intro .intro-img {
     margin: 0 auto; }
-  .hero .hero-text {
+  .intro .intro-text {
     width: 401px;
     height: 130px;
     position: absolute;
     top: 50%;
     left: 50%;
     margin: -80px 0 0 -200px; }
-    .hero .hero-text h2, .hero .hero-text img {
+    .intro .intro-text h2, .intro .intro-text img {
       margin: 0; }
-    .hero .hero-text h2 {
+    .intro .intro-text h2 {
       color: #fff; }
 
 /*********************
@@ -1692,6 +1695,11 @@ POSTS & CONTENT STYLES
   font-style: italic;
   margin: 0; }
 
+.blue {
+  background-color: #56CAF4; }
+  .blue h1 {
+    color: white; }
+
 /* entry content */
 .entry-content {
   padding: 1.5em;
@@ -1703,7 +1711,7 @@ POSTS & CONTENT STYLES
 			*/ }
   .entry-content p {
     margin: 0 0 1.5em; }
-  .entry-content .about-text {
+  .entry-content .hero-text {
     max-width: 450px;
     margin: 0 auto; }
   .entry-content table {
@@ -1742,6 +1750,15 @@ POSTS & CONTENT STYLES
     font-size: 0.9em;
     color: #787878;
     margin-bottom: 1.5em; }
+  .entry-content .gallery li {
+    float: left;
+    width: 50%;
+    padding-right: 5px;
+    margin: 0; }
+    .entry-content .gallery li img {
+      margin: 0; }
+  .entry-content .about-image {
+    border-radius: 50%; }
   .entry-content .size-auto,
   .entry-content .size-full,
   .entry-content .size-large,
@@ -1987,7 +2004,8 @@ FOOTER STYLES
 .footer {
   clear: both;
   background-color: #56CAF4;
-  color: #fff; }
+  color: #fff;
+  text-align: center; }
 
 /*
 	if you checked out the link above:
@@ -2054,6 +2072,15 @@ POSTS & CONTENT STYLES
   /* entry content */
   .entry-content {
     /* at this larger size, we can start to align images */ }
+    .entry-content .about-image {
+      width: 400px;
+      margin: 0 auto 1.5em auto;
+      display: block; }
+    .entry-content .gallery li {
+      width: 33.33%; }
+      .entry-content .gallery li img {
+        display: block;
+        margin: 0 auto; }
     .entry-content .alignleft, .entry-content img.alignleft {
       margin-right: 1.5em;
       display: inline;
@@ -2183,6 +2210,27 @@ NAVIGATION STYLES
     display: block; }
   .navbar-toggle {
     display: none; }
+  .entry-content .gallery li {
+    float: left;
+    width: 20%;
+    padding-right: 5px;
+    margin: 0; }
+    .entry-content .gallery li img {
+      margin: 0; }
+  .entry-content .about-image-wrap {
+    float: left;
+    width: 500px;
+    height: 500px;
+    margin: -100px 25px 0 -140px;
+    -webkit-shape-outside: ellipse(250px 250px at 31% 36%);
+            shape-outside: ellipse(250px 250px at 31% 36%); }
+  .entry-content .about-image {
+    margin: 0;
+    width: 500px;
+    padding-right: 5px; }
+  #about {
+    overflow: hidden;
+    height: 385px; }
   /*********************
 SIDEBARS & ASIDES
 *********************/
@@ -2245,7 +2293,16 @@ be seen on the Desktop.
 
 ******************************************************************/
   .wrap {
-    width: 1040px; } }
+    width: 1040px; }
+  .entry-content .about-image-wrap {
+    width: 600px;
+    height: 600px;
+    margin-left: -100px;
+    -webkit-shape-outside: ellipse(300px 300px at 40% 39%);
+            shape-outside: ellipse(300px 300px at 40% 39%);
+    margin-right: 20px; }
+  .entry-content .about-image {
+    width: 600px; } }
 
 /*********************
 LARGE VIEWING SIZE

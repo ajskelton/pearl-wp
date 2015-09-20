@@ -9,75 +9,99 @@
 
 			<div id="content">
 
-				<div id="hero" class="hero">
+				<section id="intro" class="intro">
 
 					<?php responsive_featured_image(get_the_ID()); ?>
-					<div class="hero-text">
-						<img id="name" class="hero-name" src="<?php echo get_template_directory_uri();?>/library/images/PearlName.png" alt="Pearl Skelton">
+					<div class="intro-text">
+						<img id="name" class="intro-name" src="<?php echo get_template_directory_uri();?>/library/images/PearlName.png" alt="Pearl Skelton">
 						<h2>Graphic Design &amp; Photography</h2>
 					</div>
 					
-				</div>
+				</section>
 
-				<div id="inner-content" class="wrap cf">
+				<section id="hero" class="entry-content wrap cf" itemprop="articleBody">
 
-						<main id="main" class="m-all t-all d-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<p class="hero-text"><?php the_field('hero-text'); ?></p>
+					
+				</section>
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<section id="home-slider" class="cf">
+					<?php if (have_rows('slider') ): ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+						<div class="slider">
 
-								<section class="entry-content cf" itemprop="articleBody">
+							<?php while(have_rows('slider') ): the_row();
 
-									<p class="about-text"><?php the_field('hero-text'); ?></p>
-									
-								</section>
+							// vars
+							$image = get_sub_field('slider_image');
 
-								<section>
-									<?php if (have_rows('slider') ): ?>
+							?>
+							
+							<div><img src="<?php echo $image['url']; ?>"></div>
 
-										<div class="slider">
+							<?php endwhile; ?>
 
-											<?php while(have_rows('slider') ): the_row();
+						</div>
 
-											// vars
-											$image = get_sub_field('slider_image');
+					<?php endif; ?>
 
-											?>
-											
-											<div><img src="<?php echo $image['url']; ?>"></div>
+				</section>
 
-											<?php endwhile; ?>
+				<section id="graphic-design" class="blue">
+					<div class="entry-content wrap cf">
+						<h1>Graphic Design</h1>
+					</div>
+				</section>
 
-										</div>
+				<section id="photography">
+					<div class="entry-content wrap cf">
+						<h1>Photography</h1>
+						<?php if(have_rows('image_gallery') ): ?>
+									<ul class="gallery cf">
+										<?php while( have_rows('image_gallery') ): the_row();
+
+										// vars
+										$image = get_sub_field('gallery_image');
+										$thumb = $image['sizes']['thumbnail'];
+										$fullSize = $image['sizes']['large'];
+
+									?>
+											<li class="image">
+												<?php if( $image ){ ?>
+													<a href="<?php echo $fullSize; ?>" rel="lightbox[photography]">
+												<?php } ?>
+
+													<img src="<?php echo $thumb; ?>" alt="<?php echo $image['alt'] ?>">
+
+												<?php if( $image ) { ?>
+													</a>
+												<?php } ?>
+											</li>
+
+										<?php endwhile; ?>
+
+									</ul> <!-- end gallery -->
 
 									<?php endif; ?>
+					</div>
+				</section>
 
-								</section>
+				<section id="about" class="blue">
+					<div class="entry-content wrap cf">
+						<h1>About</h1>
+						<div class="about-image-wrap">
+							<img class="about-image" src="<?php echo get_field('about_image'); ?>" alt="Pearl Skelton">
+						</div>
+						<p class="about-text"><?php echo get_field('about_text'); ?></p>
+					</div>
+				</section>
 
-							</article>
-
-							<?php endwhile; else : ?>
-
-									<article id="post-not-found" class="hentry cf">
-											<header class="article-header">
-												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-											<section class="entry-content">
-												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the page-custom.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
-
-							<?php endif; ?>
-
-						</main>
-
-						
-
-				</div>
+				<section id="contact">
+					<div class="entry-content wrap cf">
+						<h1>Contact</h1>
+						<?php echo do_shortcode( '[contact-form-7 id="29" title="Contact Pearl"]' ); ?>
+					</div>
+				</section>
 
 			</div>
 

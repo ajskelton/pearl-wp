@@ -125,6 +125,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
 	font-weight: 500;
 	font-family: $sans-serif;
+	text-align:center;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -139,6 +140,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 h1, .h1 {
 	font-size: 2.5em;
 	line-height: 1.333em;
+	color:$pearl-blue;
 }
 
 h2, .h2 {
@@ -304,20 +306,20 @@ and more scalable.
 } /* end .nav */
 
 /*********************
-HERO SECTION STYLES
+INTRO SECTION STYLES
 *********************/
 
-.hero {
+.intro {
 	position:relative;
 
 	picture {
 		display:block;
 		text-align:center;
 	}
-	.hero-img {
+	.intro-img {
 		margin:0 auto;
 	}
-	.hero-text {
+	.intro-text {
 		width:401px;
 		height:130px;
 		position:absolute;
@@ -393,6 +395,14 @@ POSTS & CONTENT STYLES
 			time {}
 		}
 
+		.blue {
+			background-color: $pearl-blue;
+
+			h1{
+				color:white;
+			}
+		}
+
 
 		/* entry content */
 		.entry-content {
@@ -402,7 +412,7 @@ POSTS & CONTENT STYLES
 				margin: 0 0 1.5em;
 			}
 
-			.about-text {
+			.hero-text {
 				max-width:450px;
 				margin:0 auto;
 			}
@@ -489,6 +499,24 @@ POSTS & CONTENT STYLES
 				font-size: 0.9em;
 				color: #787878;
 				margin-bottom: 1.5em;
+			}
+
+			.gallery {
+				li {
+					float:left;
+					width:50%;
+					padding-right:5px;
+					margin:0;
+
+					img {
+						margin:0;
+					}
+					
+				}
+			}
+
+			.about-image {
+				border-radius:50%;
 			}
 
 
@@ -954,6 +982,7 @@ FOOTER STYLES
 	clear: both;
 	background-color: $pearl-blue;
 	color: $white;
+	text-align:center;
 }
 
 	/*
