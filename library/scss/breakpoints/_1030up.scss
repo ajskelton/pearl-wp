@@ -10,7 +10,7 @@ be seen on the Desktop.
 ******************************************************************/
 
 .wrap {
-  width: 1040px;
+  max-width: 1040px;
 }
 .entry-content {
 	.gallery {
@@ -27,6 +27,9 @@ be seen on the Desktop.
 	}
 	.about-image {
 		width:600px;
+	}
+	.hero-text {
+		padding:4em;
 	}
 }
 #home-slider {

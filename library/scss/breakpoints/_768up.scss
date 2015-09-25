@@ -26,7 +26,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 760px;
+	// width: 760px;
 }
 
 /*********************
@@ -159,6 +159,7 @@ NAVIGATION STYLES
 .entry-content {
 	.hero-text {
 		max-width:80%;
+		padding:2em;
 	}
 	.gallery {
 		li {

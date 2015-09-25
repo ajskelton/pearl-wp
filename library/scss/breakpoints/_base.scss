@@ -89,6 +89,27 @@ LAYOUT & GRID STYLES
 	margin: 0 auto;
 }
 
+#container {
+	background: url('../images/light_grey.png') repeat;
+}
+
+#content {
+	border-left:5px solid $pearl-blue;
+	border-right:5px solid $pearl-blue;
+
+	section {
+		background-color: $white;
+	}
+
+	.blue {
+		background-color: $pearl-blue;
+
+		h1, p{
+			color:white;
+		}
+	}
+}
+
 /*********************
 LINK STYLES
 *********************/
@@ -323,8 +344,8 @@ INTRO SECTION STYLES
 		margin:0 auto;
 	}
 	.intro-text {
-		width:401px;
-		height:130px;
+		width:100%;
+		// height:130px;
 		position:absolute;
 		top:50%;
 		left:50%;
@@ -335,6 +356,7 @@ INTRO SECTION STYLES
 		}
 		h2 {
 			color: $white;
+			text-align: left;
 		}
 	}
 }
@@ -406,14 +428,6 @@ POSTS & CONTENT STYLES
 			time {}
 		}
 
-		.blue {
-			background-color: $pearl-blue;
-
-			h1, p{
-				color:white;
-			}
-		}
-
 		.txt-right {
 			text-align:center;
 		}
@@ -425,7 +439,6 @@ POSTS & CONTENT STYLES
 		}
 
 		#hero {
-			background: url('../images/light_grey.png') repeat;
 			margin-top:-6px;
 		}
 

@@ -1495,6 +1495,19 @@ LAYOUT & GRID STYLES
   width: 100%;
   margin: 0 auto; }
 
+#container {
+  background: url("../images/light_grey.png") repeat; }
+
+#content {
+  border-left: 5px solid #56CAF4;
+  border-right: 5px solid #56CAF4; }
+  #content section {
+    background-color: #fff; }
+  #content .blue {
+    background-color: #56CAF4; }
+    #content .blue h1, #content .blue p {
+      color: white; }
+
 /*********************
 LINK STYLES
 *********************/
@@ -1653,8 +1666,7 @@ INTRO SECTION STYLES
   .intro .intro-img {
     margin: 0 auto; }
   .intro .intro-text {
-    width: 401px;
-    height: 130px;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1662,7 +1674,8 @@ INTRO SECTION STYLES
     .intro .intro-text h2, .intro .intro-text img {
       margin: 0; }
     .intro .intro-text h2 {
-      color: #fff; }
+      color: #fff;
+      text-align: left; }
 
 /*********************
 POSTS & CONTENT STYLES
@@ -1703,11 +1716,6 @@ p {
   font-style: italic;
   margin: 0; }
 
-.blue {
-  background-color: #56CAF4; }
-  .blue h1, .blue p {
-    color: white; }
-
 .txt-right {
   text-align: center; }
 
@@ -1718,7 +1726,6 @@ p {
   margin: 0; }
 
 #hero {
-  background: url("../images/light_grey.png") repeat;
   margin-top: -6px; }
 
 /* entry content */
@@ -2180,8 +2187,6 @@ GENERAL STYLES
   /*********************
 LAYOUT & GRID STYLES
 *********************/
-  .wrap {
-    width: 760px; }
   /*********************
 HEADER STYLES
 *********************/
@@ -2259,7 +2264,8 @@ NAVIGATION STYLES
   .navbar-toggle {
     display: none; }
   .entry-content .hero-text {
-    max-width: 80%; }
+    max-width: 80%;
+    padding: 2em; }
   .entry-content .gallery li {
     float: left;
     width: 25%;
@@ -2349,7 +2355,7 @@ be seen on the Desktop.
 
 ******************************************************************/
   .wrap {
-    width: 1040px; }
+    max-width: 1040px; }
   .entry-content .gallery li {
     width: 20%; }
   .entry-content .about-image-wrap {
@@ -2361,6 +2367,8 @@ be seen on the Desktop.
     margin-right: 20px; }
   .entry-content .about-image {
     width: 600px; }
+  .entry-content .hero-text {
+    padding: 4em; }
   #home-slider {
     max-width: 1200px;
     margin: 0 auto; } }
@@ -2369,6 +2377,20 @@ be seen on the Desktop.
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
 *********************/
+@media only screen and (min-width: 1240px) {
+  /******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+  .wrap {
+    max-width: 1200px; } }
+
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
