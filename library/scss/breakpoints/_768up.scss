@@ -199,6 +199,23 @@ NAVIGATION STYLES
 .txt-left {
 	text-align: left;
 }
+
+.featured-portfolio {
+	width:100%;
+
+	li {
+		width:33.33%;
+		float:left;
+
+	}
+	img {
+		margin:0 auto;
+		display:block;
+	}
+	h3 {
+		margin:0;
+	}
+}
 /*********************
 SIDEBARS & ASIDES
 *********************/

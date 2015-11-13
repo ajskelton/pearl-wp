@@ -713,7 +713,10 @@ them however you see fit.
   .t-4of5 {
     float: left;
     padding-right: 0.75em;
-    width: 80%; } }
+    width: 80%; }
+  .last-col {
+    float: right;
+    padding-right: 0 !important; } }
 
 /* Landscape to small desktop */
 @media (min-width: 1030px) {
@@ -805,7 +808,10 @@ them however you see fit.
   .d-1of12 {
     float: left;
     padding-right: 0.75em;
-    width: 8.33%; } }
+    width: 8.33%; }
+  .last-col {
+    float: right;
+    padding-right: 0 !important; } }
 
 /*********************
 IMPORTING MODULES
@@ -1829,6 +1835,27 @@ img {
   max-width: 100%;
   height: auto; }
 
+.project-images {
+  width: 100%; }
+  .project-images li {
+    width: 50%;
+    list-style: none;
+    margin: 0;
+    float: left;
+    padding: 0 8px 10px 0; }
+    .project-images li:nth-child(2n) {
+      padding: 0 0 10px 8px; }
+    .project-images li img {
+      padding: 0;
+      margin: 0; }
+
+.featured-portfolio a {
+  color: #fff; }
+
+.portfolio-categories {
+  text-transform: capitalize;
+  text-align: center; }
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -2288,6 +2315,16 @@ NAVIGATION STYLES
     text-align: right; }
   .txt-left {
     text-align: left; }
+  .featured-portfolio {
+    width: 100%; }
+    .featured-portfolio li {
+      width: 33.33%;
+      float: left; }
+    .featured-portfolio img {
+      margin: 0 auto;
+      display: block; }
+    .featured-portfolio h3 {
+      margin: 0; }
   /*********************
 SIDEBARS & ASIDES
 *********************/

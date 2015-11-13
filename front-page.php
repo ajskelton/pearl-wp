@@ -54,6 +54,54 @@
 				<section id="graphic-design" class="blue">
 					<div class="entry-content cf">
 						<h1>Graphic Design</h1>
+						<ul class="featured-portfolio">
+						<?php 
+						$args = array( 'post_type' => 'portfolio', 'posts_per_page' => 1 );
+						$portfolio_projects = new WP_Query( $args );
+						if ($portfolio_projects->have_posts()) {
+							while( $portfolio_projects->have_posts()) {
+								$portfolio_projects->the_post();
+								?>
+								<li>
+									<?php 
+									if ( has_post_thumbnail() ) {
+										the_post_thumbnail('thumb');
+									}
+									?>
+									<h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
+									<?php
+										$terms = get_the_terms( $post->ID, 'portfolio-category' );
+																
+										if ( $terms && ! is_wp_error( $terms ) ) : 
+
+											$category_links = array();
+
+											foreach ( $terms as $term ) {
+												$category_links[] = $term->name;
+											}
+																
+											$category_list = join( ", ", $category_links );
+										?>
+
+										<p class="portfolio-categories">
+											<span><?php echo $category_list; ?></span>
+										</p>
+
+										<?php endif; ?>
+
+								</li>
+
+								
+								<?php 
+							}
+						}
+						else {
+							echo 'Oh no! no Projects!';
+						}
+						
+						?>
+						<?php wp_reset_query(); ?>
+						</ul>
 					</div>
 				</section>
 

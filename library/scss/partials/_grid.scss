@@ -134,6 +134,12 @@ them however you see fit.
     width: 80%;
   }
 
+  // the last column
+.last-col {
+  float: right;
+  padding-right: 0 !important;
+}
+
 } // end tablet
 
 /* Landscape to small desktop */
@@ -249,5 +255,11 @@ them however you see fit.
     @include grid-col;
     width: 8.33%;
   }
+
+  // the last column
+.last-col {
+  float: right;
+  padding-right: 0 !important;
+}
 
 } // end desktop styles
