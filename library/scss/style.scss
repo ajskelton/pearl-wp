@@ -38,8 +38,11 @@ the whole project.
 // import mixins
 @import "partials/mixins";
 
-// the grid
-@import "partials/grid";
+// import bourbon
+@import "bourbon/bourbon";
+
+// import neat
+@import "neat/neat";
 
 /*********************
 IMPORTING MODULES
