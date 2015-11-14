@@ -122,8 +122,22 @@ jQuery(document).ready(function($) {
   // Enable Slick Slider
   // 
 
-  $(".slider").slick({
-    dots: true
+  $(".slider-for").slick({
+    slideToShow: 1,
+    slidesToScroll: 1,
+    arrows:false,
+    fade:true,
+    asNavFor: '.slider-nav'
+  });
+  $(".slider-nav").slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: false,
+    arrows: true,
+    centerMode: true,
+    variableWidth: true,
+    focusOnSelect: true
   });
 
   //
@@ -131,23 +145,23 @@ jQuery(document).ready(function($) {
   // 
   
   // The function actually applying the offset
-  function offsetAnchor() {
-      if(location.hash.length !== 0) {
-          window.scrollTo(window.scrollX, window.scrollY - 99);
-      }
-  }
+  // function offsetAnchor() {
+  //     if(location.hash.length !== 0) {
+  //         window.scrollTo(window.scrollX, window.scrollY - 99);
+  //     }
+  // }
 
   // This will capture hash changes while on the page
-  $(window).on("hashchange", function () {
-      offsetAnchor();
-  });
+  // $(window).on("hashchange", function () {
+  //     offsetAnchor();
+  // });
 
   // This is here so that when you enter the page with a hash,
   // it can provide the offset in that case too. Having a timeout
   // seems necessary to allow the browser to jump to the anchor first.
-  window.setTimeout(function() {
-      offsetAnchor();
-  }, 1);
+  // window.setTimeout(function() {
+  //     offsetAnchor();
+  // }, 1);
         
 
 
