@@ -25,8 +25,50 @@ body {
 LAYOUT & GRID STYLES
 *********************/
 
-.wrap {
-	// width: 760px;
+.container {
+	@include outer-container;
+
+	.design {
+		@include span-columns(4);
+
+		&:last-child {
+			@include omega;
+		}
+	}
+
+	.pho {
+		@include span-columns(2);
+	}
+
+	.left, .right {
+		@include span-columns(6);
+	}
+	.right {
+		@include omega;
+	}
+}
+
+
+
+/*********************
+SLIDER STYLES
+*********************/
+
+.slider-for {
+	margin-bottom:2em;
+}
+.slider-nav {
+	.slick-slide {
+		width:150px;
+		margin-left:1em;
+		margin-right:1em;
+	}	
+	.slick-prev {
+		left: -30px;
+	}
+	.slick-next {
+		right: -30px;
+	}
 }
 
 /*********************
@@ -145,7 +187,10 @@ NAVIGATION STYLES
 	li.current-menu-item,
 	li.current_page_item,
 	li.current_page_ancestor {
-		a {}
+		a {
+			font-weight: bold;
+			text-decoration: underline;
+		}
 	}  /* end current highlighters */
 
 } /* end .nav */

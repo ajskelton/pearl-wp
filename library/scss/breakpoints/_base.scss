@@ -183,6 +183,20 @@ h5, .h5 {
 }
 
 /*********************
+SLIDER STYLES
+*********************/
+.slider-for {
+	margin-bottom:1em;
+}
+.slider-nav {
+	.slick-slide {
+		width:100px;
+		margin-left:0;
+		margin-right:0;
+	}
+}
+
+/*********************
 HEADER STYLES
 *********************/
 
@@ -1009,7 +1023,7 @@ CONTACT FORM 7
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
 .wpcf7 textarea {
-	background-color:transparent;
+	background-color:$white;
 	color:$black;
 	width:100%;
 	border: 2px solid $pearl-blue;

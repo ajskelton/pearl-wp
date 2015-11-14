@@ -1368,6 +1368,17 @@ h5, .h5 {
   letter-spacing: 2px; }
 
 /*********************
+SLIDER STYLES
+*********************/
+.slider-for {
+  margin-bottom: 1em; }
+
+.slider-nav .slick-slide {
+  width: 100px;
+  margin-left: 0;
+  margin-right: 0; }
+
+/*********************
 HEADER STYLES
 *********************/
 .header {
@@ -1847,7 +1858,7 @@ CONTACT FORM 7
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
 .wpcf7 textarea {
-  background-color: transparent;
+  background-color: #fff;
   color: #323944;
   width: 100%;
   border: 2px solid #56CAF4;
@@ -2016,6 +2027,52 @@ GENERAL STYLES
   /*********************
 LAYOUT & GRID STYLES
 *********************/
+  .container {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    .container::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .container .design {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 31.7615656014%; }
+      .container .design:last-child {
+        margin-right: 0; }
+      .container .design:last-child {
+        margin-right: 0; }
+    .container .pho {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 14.7019570017%; }
+      .container .pho:last-child {
+        margin-right: 0; }
+    .container .left, .container .right {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 48.821174201%; }
+      .container .left:last-child, .container .right:last-child {
+        margin-right: 0; }
+    .container .right {
+      margin-right: 0; }
+  /*********************
+SLIDER STYLES
+*********************/
+  .slider-for {
+    margin-bottom: 2em; }
+  .slider-nav .slick-slide {
+    width: 150px;
+    margin-left: 1em;
+    margin-right: 1em; }
+  .slider-nav .slick-prev {
+    left: -30px; }
+  .slider-nav .slick-next {
+    right: -30px; }
   /*********************
 HEADER STYLES
 *********************/
@@ -2089,6 +2146,11 @@ NAVIGATION STYLES
       .nav li:hover > ul {
         top: auto;
         visibility: visible; }
+    .nav li.current-menu-item a,
+    .nav li.current_page_item a,
+    .nav li.current_page_ancestor a {
+      font-weight: bold;
+      text-decoration: underline; }
   /* end .nav */
   .collapse {
     display: block; }

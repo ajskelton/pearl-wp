@@ -9,9 +9,26 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="inner-content">
 
-						<main id="main" class="m-all t-all d-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<div class="container entry-content">
+						
+						<div class="design">
+							<img src="http://placehold.it/400x300" alt="">
+							<img src="http://placehold.it/400x600" alt="">
+						</div>
+						<div class="design">
+							<img src="http://placehold.it/400x600" alt="">
+							<img src="http://placehold.it/400x300" alt="">
+						</div>
+						<div class="design">
+							<img src="http://placehold.it/400x300" alt="">
+							<img src="http://placehold.it/400x600" alt="">
+						</div>
+
+					</div> <!-- End container -->
+
+						<div id="main" role="main" class="container" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
