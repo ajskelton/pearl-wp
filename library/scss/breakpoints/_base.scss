@@ -89,17 +89,13 @@ LAYOUT & GRID STYLES
 	margin: 0 auto;
 }
 
-#container {
-	background: url('../images/light_grey.png') repeat;
-}
-
 #content {
-	border-left:5px solid $pearl-blue;
-	border-right:5px solid $pearl-blue;
+	// border-left:5px solid $pearl-blue;
+	// border-right:5px solid $pearl-blue;
 
-	section {
-		background-color: $white;
-	}
+	// section {
+	// 	background-color: $white;
+	// }
 
 	.blue {
 		background-color: $pearl-blue;
@@ -440,6 +436,14 @@ POSTS & CONTENT STYLES
 
 		#hero {
 			margin-top:-6px;
+			background: url('../images/light_grey.png') repeat;
+		}
+
+		.hero-text {
+			max-width:450px;
+			margin:0 auto;
+			padding:1em;
+
 		}
 
 
@@ -450,13 +454,6 @@ POSTS & CONTENT STYLES
 			p {
 				margin: 0 0 1.5em;
 			}
-
-			.hero-text {
-				max-width:450px;
-				margin:0 auto;
-			}
-
-
 
 			ul, ol, table, dl {}
 

@@ -7,7 +7,7 @@
 
 <?php get_header(); ?>
 
-			<div id="content" class="wrap">
+			<div id="content">
 
 				<section id="intro" class="intro">
 
@@ -21,11 +21,7 @@
 
 				<section id="hero">
 					
-					<div class="entry-content cf" itemprop="articleBody">
-
-						<p class="hero-text"><?php the_field('hero-text'); ?></p>
-
-					</div>
+					<p class="hero-text"><?php the_field('hero-text'); ?></p>
 					
 				</section>
 

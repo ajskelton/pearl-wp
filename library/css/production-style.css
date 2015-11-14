@@ -1501,18 +1501,10 @@ LAYOUT & GRID STYLES
   width: 100%;
   margin: 0 auto; }
 
-#container {
-  background: url("../images/light_grey.png") repeat; }
-
-#content {
-  border-left: 5px solid #56CAF4;
-  border-right: 5px solid #56CAF4; }
-  #content section {
-    background-color: #fff; }
-  #content .blue {
-    background-color: #56CAF4; }
-    #content .blue h1, #content .blue p {
-      color: white; }
+#content .blue {
+  background-color: #56CAF4; }
+  #content .blue h1, #content .blue p {
+    color: white; }
 
 /*********************
 LINK STYLES
@@ -1732,7 +1724,13 @@ p {
   margin: 0; }
 
 #hero {
-  margin-top: -6px; }
+  margin-top: -6px;
+  background: url("../images/light_grey.png") repeat; }
+
+.hero-text {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 1em; }
 
 /* entry content */
 .entry-content {
@@ -1745,9 +1743,6 @@ p {
 			*/ }
   .entry-content p {
     margin: 0 0 1.5em; }
-  .entry-content .hero-text {
-    max-width: 450px;
-    margin: 0 auto; }
   .entry-content table {
     width: 100%;
     border: 1px solid #eaedf2;
@@ -2218,10 +2213,11 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
   .header {
-    height: 100px; }
+    height: 120px; }
   #logo {
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
+    padding: 10px;
     float: left; }
   /*********************
 NAVIGATION STYLES
@@ -2229,7 +2225,7 @@ NAVIGATION STYLES
   .nav {
     border: 0;
     float: right;
-    height: 100px;
+    height: 120px;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */ }
@@ -2245,6 +2241,7 @@ NAVIGATION STYLES
       /* showing sub-menus */ }
       .nav li a {
         border-bottom: 0;
+        line-height: 120px;
         /*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
@@ -2290,7 +2287,7 @@ NAVIGATION STYLES
     display: block; }
   .navbar-toggle {
     display: none; }
-  .entry-content .hero-text {
+  .hero-text {
     max-width: 80%;
     padding: 2em; }
   .entry-content .gallery li {
@@ -2393,6 +2390,8 @@ be seen on the Desktop.
 ******************************************************************/
   .wrap {
     max-width: 1040px; }
+  .hero-text {
+    max-width: 850px; }
   .entry-content .gallery li {
     width: 20%; }
   .entry-content .about-image-wrap {
@@ -2414,20 +2413,6 @@ be seen on the Desktop.
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
 *********************/
-@media only screen and (min-width: 1240px) {
-  /******************************************************************
-Site Name: 
-Author: 
-
-Stylesheet: Super Large Monitor Stylesheet
-
-You can add some advanced styles here if you like. This kicks in
-on larger screens.
-
-******************************************************************/
-  .wrap {
-    max-width: 1200px; } }
-
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with

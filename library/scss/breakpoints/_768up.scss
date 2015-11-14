@@ -34,12 +34,13 @@ HEADER STYLES
 *********************/
 
 .header {
-	height:100px;
+	height:120px;
 }
 
 	#logo {
-		height:100px;
-		width:100px;
+		height:120px;
+		width:120px;
+		padding:10px;
 		float:left;
 	}
 
@@ -50,7 +51,7 @@ NAVIGATION STYLES
 .nav {
 	border: 0;
 	float:right;
-	height:100px;
+	height:120px;
 	
 	ul {
 		background:$black;
@@ -62,6 +63,7 @@ NAVIGATION STYLES
 
 		a {
 			border-bottom: 0;
+			line-height:120px;
 
 			/*
 			you can use hover styles here even though this size
@@ -156,11 +158,12 @@ NAVIGATION STYLES
 	display:none;
 }
 
+.hero-text {
+	max-width:80%;
+	padding:2em;
+}
+
 .entry-content {
-	.hero-text {
-		max-width:80%;
-		padding:2em;
-	}
 	.gallery {
 		li {
 			float:left;
