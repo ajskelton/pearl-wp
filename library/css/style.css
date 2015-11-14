@@ -1748,6 +1748,9 @@ p {
 			*/ }
   .entry-content p {
     margin: 0 0 1.5em; }
+  .entry-content ul {
+    margin-left: 1em;
+    list-style: circle outside none; }
   .entry-content table {
     width: 100%;
     border: 1px solid #eaedf2;
@@ -2210,7 +2213,7 @@ come into play. Have fun!
 GENERAL STYLES
 *********************/
   body {
-    margin-top: 100px; }
+    margin-top: 120px; }
   /*********************
 LAYOUT & GRID STYLES
 *********************/
