@@ -25,6 +25,10 @@
 							<img src="http://placehold.it/400x300" alt="">
 							<img src="http://placehold.it/400x600" alt="">
 						</div>
+						<div class="design">
+							<img src="http://placehold.it/400x600" alt="">
+							<img src="http://placehold.it/400x300" alt="">
+						</div>
 
 					</div> <!-- End container -->
 
