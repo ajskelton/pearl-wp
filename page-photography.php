@@ -14,29 +14,55 @@
 					<div class="container entry-content">
 						
 						<div class="slider-for">
-							<div><img src="http://placehold.it/1200x800/ffffff/" alt=""></div>
-							<div><img src="http://placehold.it/1200x800/ff0000/" alt=""></div>
-							<div><img src="http://placehold.it/1200x800/00ff00/" alt=""></div>
-							<div><img src="http://placehold.it/1200x800/0000ff/" alt=""></div>
-							<div><img src="http://placehold.it/1200x800/00ffff/" alt=""></div>
-							<div><img src="http://placehold.it/1200x800/ffff00/" alt=""></div>
-							<div><img src="http://placehold.it/1200x800/aa0000/" alt=""></div>
-							<div><img src="http://placehold.it/1200x800/00aa00/" alt=""></div>
-							<div><img src="http://placehold.it/1200x800/aaaa00/" alt=""></div>
-							<div><img src="http://placehold.it/1200x800/00aaaa/" alt=""></div>
-						</div>
+
+							<?php 
+
+								if ( have_rows('gallery') ):
+
+									while ( have_rows('gallery' ) ) : the_row();
+
+										$image = get_sub_field('image');
+										// var_dump($image['sizes']);
+
+										?>
+
+											<div><img src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>"></div>
+
+										<?php
+
+									endwhile;
+
+								else : // no rows found
+
+								endif;
+
+							?>
+
+						</div> <!-- end gallery -->
 
 						<div class="slider-nav">
-							<div><img src="http://placehold.it/400x320/ffffff/" alt=""></div>
-							<div><img src="http://placehold.it/400x320/ff0000/" alt=""></div>
-							<div><img src="http://placehold.it/400x320/00ff00/" alt=""></div>
-							<div><img src="http://placehold.it/400x320/0000ff/" alt=""></div>
-							<div><img src="http://placehold.it/400x320/00ffff/" alt=""></div>
-							<div><img src="http://placehold.it/400x320/ffff00/" alt=""></div>
-							<div><img src="http://placehold.it/400x320/aa0000/" alt=""></div>
-							<div><img src="http://placehold.it/400x320/00aa00/" alt=""></div>
-							<div><img src="http://placehold.it/400x320/aaaa00/" alt=""></div>
-							<div><img src="http://placehold.it/400x320/00aaaa/" alt=""></div>
+
+							<?php
+
+								if ( have_rows('gallery') ):
+
+									while ( have_rows('gallery') ) : the_row();
+
+									$thumbnail = get_sub_field('image');
+
+									?>
+
+									<div><img src="<?= $thumbnail['sizes']['medium'] ?>" alt="<?= $thumbnail['alt']; ?>"></div>
+									<?php
+
+									endwhile;
+
+								else : // no rows found
+
+								endif;
+
+							?>
+							
 						</div>
 											
 
