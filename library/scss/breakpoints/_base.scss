@@ -90,12 +90,6 @@ LAYOUT & GRID STYLES
 }
 
 #content {
-	// border-left:5px solid $pearl-blue;
-	// border-right:5px solid $pearl-blue;
-
-	// section {
-	// 	background-color: $white;
-	// }
 
 	.blue {
 		background-color: $pearl-blue;
@@ -103,6 +97,12 @@ LAYOUT & GRID STYLES
 		h1, p{
 			color:white;
 		}
+	}
+}
+
+.design {
+	&:last-child {
+		display:none;
 	}
 }
 
@@ -718,7 +718,7 @@ POSTS & CONTENT STYLES
 	}
 
 	img {
-		margin: 0 0 1.5em 0;
+		margin: 0 0 0.5em 0;
 		max-width: 100%;
 		height: auto;
 	}

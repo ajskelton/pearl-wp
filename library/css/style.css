@@ -1317,6 +1317,9 @@ LAYOUT & GRID STYLES
   #content .blue h1, #content .blue p {
     color: white; }
 
+.design:last-child {
+  display: none; }
+
 /*********************
 LINK STYLES
 *********************/
@@ -1700,7 +1703,7 @@ p {
   margin: 0; }
 
 img {
-  margin: 0 0 1.5em 0;
+  margin: 0 0 0.5em 0;
   max-width: 100%;
   height: auto; }
 
@@ -2017,6 +2020,39 @@ NAVIGATION STYLES
 					*/ }
   /* end .menu */
   /*********************
+LAYOUT & GRID STYLES
+*********************/
+  .container {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    .container::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .container .design {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 48.821174201%; }
+      .container .design:last-child {
+        margin-right: 0; }
+      .container .design:nth-child(2n) {
+        margin-right: 0; }
+      .container .design:nth-child(2n+1) {
+        clear: left; }
+      .container .design:last-child {
+        display: block; }
+    .container .left, .container .right {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 48.821174201%; }
+      .container .left:last-child, .container .right:last-child {
+        margin-right: 0; }
+    .container .right {
+      margin-right: 0; }
+  /*********************
 POSTS & CONTENT STYLES
 *********************/
   /* entry content */
@@ -2083,39 +2119,23 @@ GENERAL STYLES
   /*********************
 LAYOUT & GRID STYLES
 *********************/
-  .container {
-    max-width: 68em;
-    margin-left: auto;
-    margin-right: auto; }
-    .container::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .container .design {
-      float: left;
-      display: block;
-      margin-right: 2.3576515979%;
-      width: 31.7615656014%; }
-      .container .design:last-child {
-        margin-right: 0; }
-      .container .design:last-child {
-        margin-right: 0; }
-    .container .pho {
-      float: left;
-      display: block;
-      margin-right: 2.3576515979%;
-      width: 14.7019570017%; }
-      .container .pho:last-child {
-        margin-right: 0; }
-    .container .left, .container .right {
-      float: left;
-      display: block;
-      margin-right: 2.3576515979%;
-      width: 48.821174201%; }
-      .container .left:last-child, .container .right:last-child {
-        margin-right: 0; }
-    .container .right {
+  .container .design {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%; }
+    .container .design:nth-child(2n) {
+      margin-right: 2.3576515979%; }
+    .container .design:nth-child(2n+1) {
+      clear: none; }
+    .container .design:last-child {
       margin-right: 0; }
+    .container .design:nth-child(3n) {
+      margin-right: 0; }
+    .container .design:nth-child(3n+1) {
+      clear: left; }
+    .container .design:last-child {
+      display: none; }
   /*********************
 SLIDER STYLES
 *********************/
@@ -2215,6 +2235,8 @@ NAVIGATION STYLES
   .hero-text {
     max-width: 80%;
     padding: 2em; }
+  .entry-content img {
+    margin: 0 0 1.5em 0; }
   .entry-content .gallery li {
     float: left;
     width: 25%;

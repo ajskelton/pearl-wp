@@ -26,25 +26,15 @@ LAYOUT & GRID STYLES
 *********************/
 
 .container {
-	@include outer-container;
 
 	.design {
+		@include omega-reset(2n);
 		@include span-columns(4);
+		@include omega(3n);
 
 		&:last-child {
-			@include omega;
+			display:none;
 		}
-	}
-
-	.pho {
-		@include span-columns(2);
-	}
-
-	.left, .right {
-		@include span-columns(6);
-	}
-	.right {
-		@include omega;
 	}
 }
 
@@ -209,6 +199,9 @@ NAVIGATION STYLES
 }
 
 .entry-content {
+	img {
+		margin: 0 0 1.5em 0;
+	}
 	.gallery {
 		li {
 			float:left;

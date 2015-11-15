@@ -74,6 +74,30 @@ NAVIGATION STYLES
 	} /* end .menu */
 
 /*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.container {
+	@include outer-container;
+
+	.design {
+		@include span-columns(6);
+		@include omega(2n);
+
+		&:last-child {
+			display:block;
+		}
+	}
+
+	.left, .right {
+		@include span-columns(6);
+	}
+	.right {
+		@include omega;
+	}
+}
+
+/*********************
 POSTS & CONTENT STYLES
 *********************/
 
