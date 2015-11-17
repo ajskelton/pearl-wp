@@ -203,7 +203,9 @@ HERO STYLES
 .hero {  
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
-  $large-screen: em(860) !default;
+  $tablet-screen: em(435) !default;
+  $desktop-screen: em(768) !default;
+  $large-screen: em(1030) !default;
   $hero-background-top: #7F99BE; 
   $hero-background-bottom: #20392B;
   $hero-color: white;
@@ -212,10 +214,22 @@ HERO STYLES
 
   @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
   background-color: #324766;
-  background-position: top;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 3em;
+
+  @include media($tablet-screen) {
+  	padding: 3em 0;
+  }
+  @include media($desktop-screen) {
+  	padding: 10em;
+  }
+  @include media($large-screen) {
+  	padding: 16em;
+  }
+  @include media(em(1400)) {
+  	padding: 23em;
+  }
 
   .hero-logo img {
     height: 4em;
@@ -226,7 +240,7 @@ HERO STYLES
     @include outer-container;
     @include clearfix;
     margin: auto;
-    padding: 3.5em;
+    padding: 1em;
     text-align: center;
 
     .hero-copy {
@@ -249,15 +263,22 @@ HERO STYLES
       h2 {
         color: $hero-color;
         line-height: 1.4em;
-        margin: 0 auto 3em auto; 
-
-        @include media($large-screen) {
-          font-size: 1.1em;
-          max-width: 40%;
-        }
+        margin: 0 auto 1em auto;
       }
     }
   }
+}
+
+
+#hero {
+	margin-top:-6px;
+	background: url('../images/light_grey.png') repeat;
+}
+
+.hero-text {
+	max-width:450px;
+	margin:0 auto;
+	padding:1em;
 }
 
 /*********************
@@ -435,6 +456,7 @@ INTRO SECTION STYLES
 	}
 }
 
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -512,17 +534,6 @@ POSTS & CONTENT STYLES
 			margin:0;
 		}
 
-		#hero {
-			margin-top:-6px;
-			background: url('../images/light_grey.png') repeat;
-		}
-
-		.hero-text {
-			max-width:450px;
-			margin:0 auto;
-			padding:1em;
-
-		}
 
 
 		/* entry content */

@@ -24,7 +24,7 @@
 
 				<section id="hero">
 					
-					<p class="hero-text"><?php the_field('hero-text'); ?></p>
+					<p class="hero-text"><?php the_field('intro_text'); ?></p>
 					
 				</section>
 
