@@ -37,8 +37,12 @@ LAYOUT & GRID STYLES
 		}
 	}
 }
-
-
+.contact-box {
+	@include span-columns(6);
+	@include shift(3);
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
 
 /*********************
 SLIDER STYLES

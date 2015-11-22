@@ -105,6 +105,16 @@ LAYOUT & GRID STYLES
 		display:none;
 	}
 }
+.contact {
+	$texture-top-background: lighten(#ddf0ef, 1%);
+	$texture-bottom-background: darken(#ddf0ef, 10%);
+
+	@include texture(180deg, $texture-top-background, $texture-bottom-background, 67, 0);
+}
+.contact-box {
+	padding: 1em;
+	background-color: $white; 
+}
 
 /*********************
 LINK STYLES
@@ -475,7 +485,7 @@ POSTS & CONTENT STYLES
 		.hentry {
 			// background-color: $white;
 			// border-radius: 3px;
-			margin-bottom: 1.5em;
+			// margin-bottom: 1.5em;
 			// border: 1px solid $border-color;
 
 			header {
@@ -1101,12 +1111,25 @@ CONTACT FORM 7
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
 .wpcf7 textarea {
-	background-color:$white;
+	-webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  border: 1px solid #DDDDDD;
+  background-color:$white;
 	color:$black;
 	width:100%;
-	border: 2px solid $pearl-blue;
-	max-width:600px;
 	margin:0;
+	max-width:100%;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  border: 1px solid rgba(81, 203, 238, 1);
 }
 .wpcf7 input[type="submit"] {
 	background-color: $pearl-blue;
@@ -1114,12 +1137,8 @@ CONTACT FORM 7
 	border:none;
 	padding: 5px 10px;
 }
-input::-webkit-input-placeholder,
-input:-moz-placeholder,
-input::-moz-placeholder,
-input:-ms-input-placeholder {
-	color:$pearl-blue;
-}
+ 
+
 
 /*********************
 SIDEBARS & ASIDES

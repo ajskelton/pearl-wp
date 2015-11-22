@@ -609,6 +609,9 @@ BOX SIZING
 /* @include box-sizing(border-box); */
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
+/*********************
+TEXTURES
+*********************/
 html {
   box-sizing: border-box; }
 
@@ -1313,6 +1316,15 @@ LAYOUT & GRID STYLES
 .design:last-child {
   display: none; }
 
+.contact {
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/diagonal-noise.png"), -webkit-linear-gradient(-450deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/diagonal-noise.png"), -webkit-linear-gradient(270deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/diagonal-noise.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll; }
+
+.contact-box {
+  padding: 1em;
+  background-color: #fff; }
+
 /*********************
 LINK STYLES
 *********************/
@@ -1571,14 +1583,13 @@ POSTS & CONTENT STYLES
 p {
   color: #2ea1cb; }
 
-.hentry {
-  margin-bottom: 1.5em; }
-  .hentry header {
-    padding: 1.5em; }
-  .hentry footer {
-    padding: 1.5em; }
-    .hentry footer p {
-      margin: 0; }
+.hentry header {
+  padding: 1.5em; }
+
+.hentry footer {
+  padding: 1.5em; }
+  .hentry footer p {
+    margin: 0; }
 
 /* end .hentry */
 .single-title,
@@ -1921,24 +1932,31 @@ CONTACT FORM 7
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
 .wpcf7 textarea {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  border: 1px solid #DDDDDD;
   background-color: #fff;
   color: #323944;
   width: 100%;
-  border: 2px solid #56CAF4;
-  max-width: 600px;
-  margin: 0; }
+  margin: 0;
+  max-width: 100%; }
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  box-shadow: 0 0 5px #51cbee;
+  padding: 3px 0px 3px 3px;
+  border: 1px solid #51cbee; }
 
 .wpcf7 input[type="submit"] {
   background-color: #56CAF4;
   color: #fff;
   border: none;
   padding: 5px 10px; }
-
-input::-webkit-input-placeholder,
-input:-moz-placeholder,
-input::-moz-placeholder,
-input:-ms-input-placeholder {
-  color: #56CAF4; }
 
 /*********************
 SIDEBARS & ASIDES
@@ -2140,6 +2158,16 @@ LAYOUT & GRID STYLES
       clear: left; }
     .container .design:last-child {
       display: none; }
+  .contact-box {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%;
+    margin-left: 25.5894128995%;
+    margin-top: 2em;
+    margin-bottom: 2em; }
+    .contact-box:last-child {
+      margin-right: 0; }
   /*********************
 SLIDER STYLES
 *********************/
