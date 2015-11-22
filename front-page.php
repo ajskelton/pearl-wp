@@ -14,7 +14,7 @@
 					<div class="hero">
 						<div class="hero-inner">
 							<div class="hero-copy">
-								<h1><img src="<?php echo get_template_directory_uri();?>/library/images/PearlName.png"></h1>
+								<h1 class="hero-name"><span class="sr-only">Pearl Skelton</span></h1>
 								<h2>Graphic Design &amp; Photography</h2>	
 							</div>
 						</div>
