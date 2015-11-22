@@ -96,6 +96,7 @@ NAVIGATION STYLES
 		a {
 			border-bottom: 0;
 			line-height:120px;
+			font-size:1.2em;
 
 			/*
 			you can use hover styles here even though this size
@@ -179,7 +180,6 @@ NAVIGATION STYLES
 	li.current_page_ancestor {
 		a {
 			font-weight: bold;
-			text-decoration: underline;
 		}
 	}  /* end current highlighters */
 

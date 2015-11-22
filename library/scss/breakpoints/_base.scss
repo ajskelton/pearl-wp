@@ -206,6 +206,7 @@ HERO STYLES
   $tablet-screen: em(435) !default;
   $desktop-screen: em(768) !default;
   $large-screen: em(1030) !default;
+  $xl-screen: em(1400) !default;
   $hero-background-top: #7F99BE; 
   $hero-background-bottom: #20392B;
   $hero-color: white;
@@ -225,22 +226,16 @@ HERO STYLES
   	padding: 10em;
   }
   @include media($large-screen) {
-  	padding: 16em;
+  	padding: 14em;
   }
   @include media(em(1400)) {
-  	padding: 23em;
-  }
-
-  .hero-logo img {
-    height: 4em;
-    margin-bottom: 1em;
+  	padding: 19em;
   }
 
   .hero-inner {
     @include outer-container;
     @include clearfix;
     margin: auto;
-    padding: 1em;
     text-align: center;
 
     .hero-copy {
@@ -250,13 +245,22 @@ HERO STYLES
         color: $hero-color;
         font-size: 1.6em;
         margin-bottom: 0.5em;
+        height:100px;
+        background: url('../images/PearlName.png') center center no-repeat;
+        background-size: 100%;
 
-        @include media($large-screen) {
-          font-size: 1.8em;
+        @include media($tablet-screen) {
+        	background-size: auto;
         }
 
-        img {
-        	margin:0;
+        @include media($large-screen) {
+          background-image: url('../images/PearlName_600px.png');
+          height: 125px;
+        }
+
+        @include media($xl-screen) {
+					background-image: url('../images/PearlName_800px.png');
+					height: 160px;
         }
       }
 
@@ -357,7 +361,7 @@ and more scalable.
 
 		a {
 			display: block;
-			color: $pearl-blue;
+			color: $primary-color;
 			text-decoration: none;
 			line-height:100px;
 			padding: 0 1em;
