@@ -1443,14 +1443,12 @@ HERO STYLES
         line-height: 1.4em;
         margin: 0 auto 1em auto; }
 
-#hero {
-  margin-top: -6px;
+.text {
   background: url("../images/light_grey.png") repeat; }
-
-.hero-text {
-  max-width: 450px;
-  margin: 0 auto;
-  padding: 1em; }
+  .text p {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 1em; }
 
 /*********************
 HEADER STYLES
@@ -2238,8 +2236,8 @@ NAVIGATION STYLES
     display: block; }
   .navbar-toggle {
     display: none; }
-  .hero-text {
-    max-width: 80%;
+  .text p {
+    max-width: 40em;
     padding: 2em;
     font-size: 1.2em; }
   .entry-content img {

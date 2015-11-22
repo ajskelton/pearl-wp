@@ -193,10 +193,13 @@ NAVIGATION STYLES
 	display:none;
 }
 
-.hero-text {
-	max-width:80%;
-	padding:2em;
-	font-size:1.2em;
+.text {
+
+	p {
+		max-width:40em;
+		padding:2em;
+		font-size:1.2em;		
+	}
 }
 
 .entry-content {

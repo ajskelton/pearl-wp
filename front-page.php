@@ -22,9 +22,13 @@
 					
 				</section>
 
-				<section id="hero">
+				<section class="text">
+
+					<div class="container">
 					
-					<p class="hero-text"><?php the_field('intro_text'); ?></p>
+						<p><?php the_field('intro_text'); ?></p>
+
+					</div>
 					
 				</section>
 

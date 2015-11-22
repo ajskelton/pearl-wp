@@ -274,15 +274,14 @@ HERO STYLES
 }
 
 
-#hero {
-	margin-top:-6px;
+.text {
 	background: url('../images/light_grey.png') repeat;
-}
 
-.hero-text {
-	max-width:450px;
-	margin:0 auto;
-	padding:1em;
+	p {
+		max-width:450px;
+		margin: 0 auto;
+		padding: 1em;
+	}
 }
 
 /*********************
