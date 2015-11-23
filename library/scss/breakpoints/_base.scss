@@ -106,10 +106,7 @@ LAYOUT & GRID STYLES
 	}
 }
 .contact {
-	$texture-top-background: lighten(#ddf0ef, 1%);
-	$texture-bottom-background: darken(#ddf0ef, 10%);
-
-	@include texture(180deg, $texture-top-background, $texture-bottom-background, 67, 0);
+	background: url('../images/light_grey.png') repeat;
 }
 .contact-box {
 	padding: 1em;
