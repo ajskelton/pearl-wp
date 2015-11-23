@@ -8,3 +8,15 @@ You can add some advanced styles here if you like. This kicks in
 on larger screens.
 
 ******************************************************************/
+
+.container {
+	.design {
+		@include omega-reset(3n);
+		@include span-columns(3);
+		@include omega(4n);
+
+		&:last-child {
+			display:block;
+		}
+	}
+}
