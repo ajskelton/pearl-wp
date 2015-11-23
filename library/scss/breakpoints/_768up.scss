@@ -18,7 +18,7 @@ GENERAL STYLES
 *********************/
 
 body {
-	margin-top:120px;
+	margin-top:0;
 }
 
 /*********************
@@ -70,7 +70,8 @@ HEADER STYLES
 *********************/
 
 .header {
-	height:120px;
+	height: 120px;
+	position: relative;
 }
 
 	#logo {

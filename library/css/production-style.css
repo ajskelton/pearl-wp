@@ -2123,7 +2123,7 @@ come into play. Have fun!
 GENERAL STYLES
 *********************/
   body {
-    margin-top: 120px; }
+    margin-top: 0; }
   /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -2171,7 +2171,8 @@ SLIDER STYLES
 HEADER STYLES
 *********************/
   .header {
-    height: 120px; }
+    height: 120px;
+    position: relative; }
   #logo {
     height: 120px;
     width: 120px;
