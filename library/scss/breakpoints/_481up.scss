@@ -79,22 +79,26 @@ LAYOUT & GRID STYLES
 
 .container {
 	@include outer-container;
+}
+.design {
+	@include span-columns(6);
+	@include omega(2n);
 
-	.design {
-		@include span-columns(6);
-		@include omega(2n);
+	&:last-child {
+		display:block;
+	}
+}
 
-		&:last-child {
-			display:block;
-		}
-	}
+.left, .right {
+	@include span-columns(6);
+}
 
-	.left, .right {
-		@include span-columns(6);
-	}
-	.right {
-		@include omega;
-	}
+.right {
+	@include omega;
+}
+
+.content-container {
+	@include outer-container(80em);
 }
 
 /*********************

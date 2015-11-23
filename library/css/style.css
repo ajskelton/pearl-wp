@@ -1615,7 +1615,7 @@ p {
 
 /* entry content */
 .entry-content {
-  padding: 1.5em;
+  padding: 1em;
   /*
 			image alignment on a screen this size may be
 			a bit difficult. It's set to start aligning
@@ -2044,28 +2044,36 @@ LAYOUT & GRID STYLES
       clear: both;
       content: "";
       display: table; }
-    .container .design {
-      float: left;
-      display: block;
-      margin-right: 2.3576515979%;
-      width: 48.821174201%; }
-      .container .design:last-child {
-        margin-right: 0; }
-      .container .design:nth-child(2n) {
-        margin-right: 0; }
-      .container .design:nth-child(2n+1) {
-        clear: left; }
-      .container .design:last-child {
-        display: block; }
-    .container .left, .container .right {
-      float: left;
-      display: block;
-      margin-right: 2.3576515979%;
-      width: 48.821174201%; }
-      .container .left:last-child, .container .right:last-child {
-        margin-right: 0; }
-    .container .right {
+  .design {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%; }
+    .design:last-child {
       margin-right: 0; }
+    .design:nth-child(2n) {
+      margin-right: 0; }
+    .design:nth-child(2n+1) {
+      clear: left; }
+    .design:last-child {
+      display: block; }
+  .left, .right {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%; }
+    .left:last-child, .right:last-child {
+      margin-right: 0; }
+  .right {
+    margin-right: 0; }
+  .content-container {
+    max-width: 80em;
+    margin-left: auto;
+    margin-right: auto; }
+    .content-container::after {
+      clear: both;
+      content: "";
+      display: table; }
   /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -2133,22 +2141,22 @@ GENERAL STYLES
   /*********************
 LAYOUT & GRID STYLES
 *********************/
-  .container .design {
+  .design {
     float: left;
     display: block;
     margin-right: 2.3576515979%;
     width: 31.7615656014%; }
-    .container .design:nth-child(2n) {
+    .design:nth-child(2n) {
       margin-right: 2.3576515979%; }
-    .container .design:nth-child(2n+1) {
+    .design:nth-child(2n+1) {
       clear: none; }
-    .container .design:last-child {
+    .design:last-child {
       margin-right: 0; }
-    .container .design:nth-child(3n) {
+    .design:nth-child(3n) {
       margin-right: 0; }
-    .container .design:nth-child(3n+1) {
+    .design:nth-child(3n+1) {
       clear: left; }
-    .container .design:last-child {
+    .design:last-child {
       display: none; }
   .contact-box {
     float: left;
@@ -2395,22 +2403,22 @@ You can add some advanced styles here if you like. This kicks in
 on larger screens.
 
 ******************************************************************/
-  .container .design {
+  .design {
     float: left;
     display: block;
     margin-right: 2.3576515979%;
     width: 23.2317613015%; }
-    .container .design:nth-child(3n) {
+    .design:nth-child(3n) {
       margin-right: 2.3576515979%; }
-    .container .design:nth-child(3n+1) {
+    .design:nth-child(3n+1) {
       clear: none; }
-    .container .design:last-child {
+    .design:last-child {
       margin-right: 0; }
-    .container .design:nth-child(4n) {
+    .design:nth-child(4n) {
       margin-right: 0; }
-    .container .design:nth-child(4n+1) {
+    .design:nth-child(4n+1) {
       clear: left; }
-    .container .design:last-child {
+    .design:last-child {
       display: block; } }
 
 /*********************

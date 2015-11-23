@@ -9,14 +9,12 @@ on larger screens.
 
 ******************************************************************/
 
-.container {
-	.design {
-		@include omega-reset(3n);
-		@include span-columns(3);
-		@include omega(4n);
+.design {
+	@include omega-reset(3n);
+	@include span-columns(3);
+	@include omega(4n);
 
-		&:last-child {
-			display:block;
-		}
+	&:last-child {
+		display:block;
 	}
 }

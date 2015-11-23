@@ -24,7 +24,7 @@
 
 				<div id="inner-content" class="inner-content">
 
-					<div class="container entry-content">
+					<div class="content-container entry-content">
 						
 						<div class="design">
 							<?php if( !empty($image_1) ): ?>
