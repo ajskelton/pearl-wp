@@ -11,26 +11,13 @@
 
 				<div id="inner-content" class="inner-content">
 
-					<div class="container entry-content">
-					
-					<div class="left">
-						<h2>Hi! I'm Pearl Skelton</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et iusto saepe numquam tenetur odio quaerat commodi obcaecati veritatis placeat. Quo voluptates reprehenderit, dolor iste soluta eos hic temporibus ipsum eaque vero quaerat, corrupti ut sed fugiat quasi eius officiis modi at blanditiis possimus debitis? Quidem a eaque autem, reiciendis alias.</p>
-					</div>
-
-					<div class="right">
-						<img src="http://placehold.it/600x400" alt="">
-					</div>											
-
-					</div> <!-- End container -->
-
 						<div id="main" role="main" class="container" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								<section class="entry-content cf" itemprop="articleBody">
+								<section class="entry-content" itemprop="articleBody">
 									<?php
 										// the content (pretty self explanatory huh)
 										the_content();

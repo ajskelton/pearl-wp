@@ -1473,6 +1473,9 @@ HERO STYLES
     margin: 0 auto;
     padding: 1em; }
 
+.circle {
+  border-radius: 100%; }
+
 /*********************
 HEADER STYLES
 *********************/
