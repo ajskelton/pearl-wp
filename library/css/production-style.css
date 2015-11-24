@@ -2197,7 +2197,7 @@ LAYOUT & GRID STYLES
   /*********************
 SLIDER STYLES
 *********************/
-  .slider-for {
+  .slider {
     margin-bottom: 2em; }
   .slider-nav .slick-slide {
     width: 150px;
@@ -2297,12 +2297,6 @@ NAVIGATION STYLES
     max-width: 40em;
     padding: 2em;
     font-size: 1.2em; }
-  .entry-content img {
-    margin: 0 0 1.5em 0; }
-  .entry-content .gallery li {
-    float: left;
-    width: 25%;
-    padding-right: 5px; }
   .entry-content .about-image-wrap {
     float: left;
     width: 500px;
@@ -2321,16 +2315,6 @@ NAVIGATION STYLES
     text-align: right; }
   .txt-left {
     text-align: left; }
-  .featured-portfolio {
-    width: 100%; }
-    .featured-portfolio li {
-      width: 33.33%;
-      float: left; }
-    .featured-portfolio img {
-      margin: 0 auto;
-      display: block; }
-    .featured-portfolio h3 {
-      margin: 0; }
   /*********************
 SIDEBARS & ASIDES
 *********************/
