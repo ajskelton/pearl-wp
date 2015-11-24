@@ -1378,13 +1378,38 @@ h5, .h5 {
 /*********************
 SLIDER STYLES
 *********************/
-.slider-for {
-  margin-bottom: 1em; }
+.slider-wrapper {
+  position: relative; }
+
+.slider {
+  margin-bottom: 1em;
+  position: relative; }
 
 .slider-nav .slick-slide {
   width: 100px;
   margin-left: 0;
   margin-right: 0; }
+
+.slick-prev,
+.slick-next {
+  background: none;
+  border-radius: 0; }
+
+.arrow {
+  width: 30px;
+  height: 100px;
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  margin-top: -3em;
+  fill: rgba(86, 202, 244, 0.5);
+  cursor: pointer; }
+
+.right-arrow {
+  right: 0; }
+
+.left-arrow {
+  left: 0; }
 
 /*********************
 HERO STYLES
@@ -2075,6 +2100,13 @@ LAYOUT & GRID STYLES
       content: "";
       display: table; }
   /*********************
+SLIDER STYLES
+*********************/
+  .left-arrow {
+    left: 1em; }
+  .right-arrow {
+    right: 1em; }
+  /*********************
 POSTS & CONTENT STYLES
 *********************/
   /* entry content */
@@ -2181,6 +2213,8 @@ SLIDER STYLES
     left: -30px; }
   .slider-nav .slick-next {
     right: -30px; }
+  .arrow {
+    width: 60px; }
   /*********************
 HEADER STYLES
 *********************/
@@ -2419,7 +2453,14 @@ on larger screens.
     .design:nth-child(4n+1) {
       clear: left; }
     .design:last-child {
-      display: block; } }
+      display: block; }
+  /*********************
+SLIDER STYLES
+*********************/
+  .left-arrow {
+    left: -4em; }
+  .right-arrow {
+    right: -4em; } }
 
 /*********************
 RETINA (2x RESOLUTION DEVICES)

@@ -192,9 +192,12 @@ h5, .h5 {
 /*********************
 SLIDER STYLES
 *********************/
-
-.slider-for {
+.slider-wrapper {
+	position:relative;
+}
+.slider {
 	margin-bottom:1em;
+	position:relative;
 }
 .slider-nav {
 	.slick-slide {
@@ -203,6 +206,29 @@ SLIDER STYLES
 		margin-right:0;
 	}
 }
+.slick-prev,
+.slick-next {
+	background:none;
+	border-radius:0;
+}
+
+.arrow {
+	width: 30px;
+	height: 100px;
+	position: absolute;
+	z-index: 20;
+	top: 50%;
+	margin-top: -3em;
+	fill: rgba($pearl-blue,0.5);
+	cursor: pointer;
+}
+.right-arrow {
+	right:0;
+}
+.left-arrow {
+	left:0;
+}
+
 
 /*********************
 HERO STYLES

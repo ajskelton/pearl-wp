@@ -12,33 +12,45 @@
 				<div id="inner-content" class="inner-content">
 
 					<div class="container entry-content">
-						
-						<div class="slider-for">
 
-							<?php 
+						<div class="slider-wrapper">
 
-								if ( have_rows('gallery') ):
+							<div class="slider">
 
-									while ( have_rows('gallery' ) ) : the_row();
+								<?php 
 
-										$image = get_sub_field('image');
-										// var_dump($image['sizes']);
+									if ( have_rows('gallery') ):
 
-										?>
+										while ( have_rows('gallery' ) ) : the_row();
 
-											<div><img src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>"></div>
+											$image = get_sub_field('image');
+											?>
 
-										<?php
+												<div><img src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>"></div>
 
-									endwhile;
+											<?php
 
-								else : // no rows found
+										endwhile;
 
-								endif;
+									else : // no rows found
 
-							?>
+									endif;
 
-						</div> <!-- end gallery -->
+								?>
+
+
+
+							</div> <!-- end .slider -->
+
+							<svg class='arrow left-arrow'>
+								<use xlink:href="#shape-chevron-left" />
+							</svg>
+
+							<svg class='arrow right-arrow'>
+								<use xlink:href="#shape-chevron-right" />
+							</svg>
+
+						</div> <!-- end .slider-wrapper -->
 
 						<div class="slider-nav">
 

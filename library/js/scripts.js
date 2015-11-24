@@ -122,23 +122,31 @@ jQuery(document).ready(function($) {
   // Enable Slick Slider
   // 
 
-  $(".slider-for").slick({
+  $(".slider").slick({
     slideToShow: 1,
     slidesToScroll: 1,
-    arrows:false,
-    fade:true,
-    asNavFor: '.slider-nav'
-  });
+    arrows:true,
+    fade:false,
+    asNavFor: '.slider-nav',
+    prevArrow: $('.left-arrow'),
+    nextArrow: $('.right-arrow'),
+  })
   $(".slider-nav").slick({
     slidesToShow: 6,
     slidesToScroll: 1,
-    asNavFor: '.slider-for',
+    asNavFor: '.slider',
     dots: false,
-    arrows: true,
+    arrows: false,
     centerMode: true,
     variableWidth: true,
     focusOnSelect: true
-  });
+  })
+  // $('.left-arrow').click(function() {
+  //   $('.slider').slickPrev();
+  // })
+  // $('.right-arrow').click(function() {
+  //   $('.slider').slickNext();
+  // })
 
   //
   // Function to offset jump from links to anchors because of sticky navigation
