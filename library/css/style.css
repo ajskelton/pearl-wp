@@ -1598,7 +1598,8 @@ POSTS & CONTENT STYLES
   margin-bottom: 1em; }
 
 p {
-  color: #2ea1cb; }
+  color: #2ea1cb;
+  line-height: 1.3em; }
 
 .hentry header {
   padding: 1.5em; }
