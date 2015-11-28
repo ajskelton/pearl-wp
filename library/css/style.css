@@ -1308,9 +1308,6 @@ LAYOUT & GRID STYLES
   #content .blue h1, #content .blue p {
     color: white; }
 
-.design:last-child {
-  display: none; }
-
 .contact {
   background: url("../images/light_grey.png") repeat; }
 

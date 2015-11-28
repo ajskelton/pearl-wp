@@ -100,14 +100,10 @@ LAYOUT & GRID STYLES
 	}
 }
 
-.design {
-	&:last-child {
-		display:none;
-	}
-}
 .contact {
 	background: url('../images/light_grey.png') repeat;
 }
+
 .contact-box {
 	padding: 1em;
 	background-color: $white; 
