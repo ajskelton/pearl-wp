@@ -11,7 +11,7 @@
 
 				<div id="inner-content" class="inner-content">
 
-					<div class="text">
+					<div class="text-background about-page">
 													
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

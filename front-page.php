@@ -22,11 +22,11 @@
 					
 				</section>
 
-				<section class="text">
+				<section class="text-background">
 
 					<div class="container">
 					
-						<p><?php the_field('intro_text'); ?></p>
+						<p class="text"><?php the_field('intro_text'); ?></p>
 
 					</div>
 					

@@ -80,7 +80,7 @@
 
 					</div> <!-- End container -->
 
-					<div class="text">
+					<div class="text-background">
 
 						<div class="container">
 

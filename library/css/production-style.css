@@ -1332,7 +1332,6 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   font-weight: 500;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
   /*
 	if you're going to use webfonts, be sure to check your weights
@@ -1350,7 +1349,10 @@ h1, .h1 {
 h2, .h2 {
   font-size: 1.75em;
   line-height: 1.4em;
-  margin-bottom: 0.375em; }
+  margin-bottom: 0.375em;
+  margin-top: 0;
+  color: #2ea1cb;
+  text-align: left; }
 
 h3, .h3 {
   font-size: 1.125em; }
@@ -1460,18 +1462,43 @@ HERO STYLES
             height: 160px; } }
       .hero .hero-inner .hero-copy h2 {
         color: white;
+        text-align: center;
+        font-size: 1.5em;
         line-height: 1.4em;
         margin: 0 auto 1em auto; }
+        @media screen and (min-width: 64.375em) {
+          .hero .hero-inner .hero-copy h2 {
+            font-size: 2.3em; } }
+        @media screen and (min-width: 87.5em) {
+          .hero .hero-inner .hero-copy h2 {
+            font-size: 3em; } }
+
+.text-background {
+  background: url("../images/light_grey.png") repeat; }
 
 .text {
-  background: url("../images/light_grey.png") repeat; }
-  .text p {
-    max-width: 450px;
-    margin: 0 auto;
-    padding: 1em; }
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 1em; }
+
+.about-page {
+  padding: 5vw;
+  overflow: hidden; }
+
+.about-image {
+  max-width: 350px;
+  margin: 0 auto;
+  display: block; }
 
 .circle {
   border-radius: 100%; }
+
+blockquote {
+  margin: 0;
+  font-size: 1.3em; }
+
+cite:before {
+  content: '\2014'; }
 
 /*********************
 HEADER STYLES
@@ -2195,6 +2222,8 @@ LAYOUT & GRID STYLES
     margin-bottom: 2em; }
     .contact-box:last-child {
       margin-right: 0; }
+    .contact-box p {
+      font-size: 1.2em; }
   /*********************
 SLIDER STYLES
 *********************/
@@ -2294,10 +2323,16 @@ NAVIGATION STYLES
     display: block; }
   .navbar-toggle {
     display: none; }
-  .text p {
+  .text {
     max-width: 40em;
     padding: 2em;
     font-size: 1.2em; }
+  .about {
+    font-size: 1.2em; }
+  .about-image {
+    max-width: 400px; }
+  .about-page {
+    padding: 3vw; }
   .entry-content .about-image-wrap {
     float: left;
     width: 500px;

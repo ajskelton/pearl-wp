@@ -40,6 +40,10 @@ LAYOUT & GRID STYLES
 	@include shift(3);
 	margin-top: 2em;
 	margin-bottom: 2em;
+
+	p {
+		font-size: 1.2em;
+	}
 }
 
 /*********************
@@ -204,12 +208,21 @@ NAVIGATION STYLES
 }
 
 .text {
+	max-width: 40em;
+	padding: 2em;
+	font-size: 1.2em;		
+}
 
-	p {
-		max-width:40em;
-		padding:2em;
-		font-size:1.2em;		
-	}
+.about {
+	font-size: 1.2em;
+}
+
+.about-image {
+	max-width: 400px;
+}
+
+.about-page {
+	padding: 3vw;
 }
 
 .entry-content {
