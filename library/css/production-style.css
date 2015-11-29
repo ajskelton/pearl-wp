@@ -2210,6 +2210,8 @@ LAYOUT & GRID STYLES
       clear: left; }
     .design:last-child {
       display: none; }
+  .contact {
+    padding: 2em 0; }
   .contact-box {
     float: left;
     display: block;
