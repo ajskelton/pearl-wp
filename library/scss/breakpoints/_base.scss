@@ -169,7 +169,7 @@ h2, .h2 {
 	margin-bottom: 0.375em;
 	margin-top: 0;
 	color: $primary-color;
-	text-align: left;
+	// text-align: left;
 }
 
 h3, .h3 {
@@ -298,7 +298,6 @@ HERO STYLES
 
       h2 {
         color: $hero-color;
-        text-align: center;
         font-size:1.5em;
         line-height: 1.4em;
         margin: 0 auto 1em auto;

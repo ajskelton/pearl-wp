@@ -1358,8 +1358,7 @@ h2, .h2 {
   line-height: 1.4em;
   margin-bottom: 0.375em;
   margin-top: 0;
-  color: #2ea1cb;
-  text-align: left; }
+  color: #2ea1cb; }
 
 h3, .h3 {
   font-size: 1.125em; }
@@ -1468,7 +1467,6 @@ HERO STYLES
             height: 160px; } }
       .hero .hero-inner .hero-copy h2 {
         color: white;
-        text-align: center;
         font-size: 1.5em;
         line-height: 1.4em;
         margin: 0 auto 1em auto; }
@@ -2336,7 +2334,8 @@ NAVIGATION STYLES
   .about {
     font-size: 1.2em; }
   .about-image {
-    max-width: 400px; }
+    max-width: 400px;
+    padding: 2em 0; }
   .about-page {
     padding: 3vw; }
   .entry-content .about-image-wrap {
