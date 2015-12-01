@@ -1319,12 +1319,12 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #0694c7;
+  color: #014D68;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #05739a; }
+    color: #012b3b; }
   a:link, a:visited:link {
     /*
 		this highlights links on iPhones/iPads.
@@ -2286,7 +2286,7 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/ }
         .nav li a:hover, .nav li a:focus {
-          color: #05739a;
+          color: #012b3b;
           text-decoration: none; }
       .nav li ul.sub-menu,
       .nav li ul.children {
