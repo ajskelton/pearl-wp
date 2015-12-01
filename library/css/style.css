@@ -2024,7 +2024,8 @@ FOOTER STYLES
   background-color: #56CAF4;
   text-align: center; }
   .footer p {
-    color: #fff; }
+    color: #fff;
+    margin: 1em auto; }
 
 /*
 	if you checked out the link above:
