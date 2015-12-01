@@ -1312,12 +1312,12 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #56CAF4;
+  color: #0694c7;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #2bbcf1; }
+    color: #05739a; }
   a:link, a:visited:link {
     /*
 		this highlights links on iPhones/iPads.
@@ -1618,7 +1618,8 @@ POSTS & CONTENT STYLES
 
 p {
   color: #2ea1cb;
-  line-height: 1.3em; }
+  line-height: 1.3em;
+  max-width: 40em; }
 
 .hentry header {
   padding: 1.5em; }
@@ -2279,7 +2280,7 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/ }
         .nav li a:hover, .nav li a:focus {
-          color: #2bbcf1;
+          color: #05739a;
           text-decoration: none; }
       .nav li ul.sub-menu,
       .nav li ul.children {
