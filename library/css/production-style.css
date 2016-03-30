@@ -1332,12 +1332,7 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   font-weight: 500;
-  text-align: center;
-  /*
-	if you're going to use webfonts, be sure to check your weights
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-  /* removing text decoration from all headline links */ }
+  text-align: center; }
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
     text-decoration: none; }
 
@@ -1351,7 +1346,7 @@ h2, .h2 {
   line-height: 1.4em;
   margin-bottom: 0.375em;
   margin-top: 0;
-  color: #2ea1cb; }
+  color: #303030; }
 
 h3, .h3 {
   font-size: 1.125em; }
@@ -1617,7 +1612,7 @@ POSTS & CONTENT STYLES
   margin-bottom: 1em; }
 
 p {
-  color: #2ea1cb;
+  color: #303030;
   line-height: 1.3em;
   max-width: 40em; }
 

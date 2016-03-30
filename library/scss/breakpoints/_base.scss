@@ -144,14 +144,8 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
 	font-weight: 500;
-	// font-family: $sans-serif;
 	text-align:center;
-	/*
-	if you're going to use webfonts, be sure to check your weights
-	http://css-tricks.com/watch-your-font-weight/
-	*/
 
-	/* removing text decoration from all headline links */
 	a {
 		text-decoration: none;
 	}
@@ -168,8 +162,7 @@ h2, .h2 {
 	line-height: 1.4em;
 	margin-bottom: 0.375em;
 	margin-top: 0;
-	color: $primary-color;
-	// text-align: left;
+	color: $dark-gray;
 }
 
 h3, .h3 {
@@ -534,7 +527,7 @@ POSTS & CONTENT STYLES
 		}
 
 		p {
-			color: $primary-color;
+			color: $dark-gray;
 			line-height: 1.3em;
 			max-width: 40em;
 		}
