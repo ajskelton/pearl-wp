@@ -50,15 +50,14 @@
 
 				<div id="inner-header" class="container inner-header">
 
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 					<a href="<?php echo home_url(); ?>" rel="nofollow"><img id="logo" src="<?php echo get_template_directory_uri();?>/library/images/PearlLogo.png" alt="Pearl Skelton"></a>
 
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+		          	</button>
 
 
 					<nav role="navigation" class="navbar-collapse collapse" id="navbar" itemscope itemtype="http://schema.org/SiteNavigationElement">
