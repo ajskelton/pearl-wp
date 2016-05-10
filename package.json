@@ -15,21 +15,12 @@
   "devDependencies": {
     "flightplan": "^0.6.13",
     "grunt-autoprefixer": "3.0.3",
+    "grunt-contrib-cssmin": "^0.10.0",
     "grunt-notify": "0.4.1",
     "grunt-sass": "^1.1.0",
     "grunt-svgstore": "^0.5.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tonyspiro/grunt-html5-boilerplate"
-  },
-  "author": "Tony Spiro <tspiro@tonyspiro.com> (http://tonyspiro.com/)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tonyspiro/grunt-html5-boilerplate/issues"
-  },
-  "homepage": "https://github.com/tonyspiro/grunt-html5-boilerplate"
+  }
 }

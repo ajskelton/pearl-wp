@@ -35,6 +35,13 @@ module.exports = function(grunt) {
       }
     }
   },
+  cssmin: {
+    target: {
+      files: {
+        'library/css/production-style.min.css': 'library/css/production-style.css'
+      }
+    }
+  },
   svgstore: {
     options: {
       prefix : 'shape-',
@@ -62,22 +69,8 @@ module.exports = function(grunt) {
     },
     css: {
       files: '**/*.scss',
-      tasks: ['sass', 'autoprefixer', 'notify:css']
+      tasks: ['sass', 'autoprefixer', 'cssmin']
     },
-  },
-  notify: {
-    css: {
-      options: {
-        title: 'Task Complete',
-        message: 'Compass/Autoprefixer finished compiling!'
-      }
-    },
-    scripts: {
-      options: {
-        title: 'Task Complete',
-        message: 'Scripts finished compiling!'
-      }
-    }
   }
   });
 
